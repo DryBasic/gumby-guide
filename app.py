@@ -12,3 +12,5 @@ HelpfulSidebar()
 
 dash = Dashboard()
 dash.q1_panel()
+
+dash.debug()
