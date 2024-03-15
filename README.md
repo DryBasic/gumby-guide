@@ -8,3 +8,8 @@
 ## About
 
 This application is the result of a final project for DSE 241 - Data Visualization. The referenced dataset was found [on this Reddit thread](https://www.reddit.com/r/climbharder/comments/gi7v2k/rquest_climbing_specific_datasets/) and the Google Sheet itself can be found [here](https://docs.google.com/spreadsheets/d/1J6d45EqIlIsIqNdi2X-Zl-EGFxf9d9T3R_W55xrpEAs/edit#gid=1650492946).
+
+## Demo
+
+https://github.com/DryBasic/gumby-guide/assets/75399727/596eab85-0ae8-474d-9288-3f4ea978aa80
+
