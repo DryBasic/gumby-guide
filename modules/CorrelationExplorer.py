@@ -71,7 +71,7 @@ class CorrelationExplorer:
                 x=b_corr['feature'], y=b_corr['corr']
             ),
             go.Bar(
-                name='Boulder Grade',
+                name='Rope Grade',
                 x=r_corr['feature'], y=r_corr['corr']
             ),
         ])
