@@ -1,0 +1,36 @@
+SurveyKey,DataFrameKey,Label,Desc
+Timestamp,timestamp,Timestamp,Date & time that the survey was completed
+Sex,sex,Sex,Sex of the survey respondent
+Height (cm),height,Height (cm),Height of the survey respondent in centimeters
+Weight (KG),weight,Weight (kg),Weight of the survey respondent in kilograms
+Arm Span (cm),wingspan,Wingspan (cm),The length in centimeters of the survey respondent's arm span
+How long have you been climbing for?,years_climbing,Years Climbing,How many years since the survey respondent started climbing
+Hardest V Grade ever climbed ,hardest_boulder_ever,Hardest Boulder Send (Ever),The highest V grade the respondent has sent
+Hardest V Grade climbed in the Last 3 months,hardest_boulder_recent,Hardest Boulder Send (Recent),The highest V grade the respondent has sent in the last 3 months
+The V grade you can send 90-100% of routes ,hardest_boulder_confident,Boulder Grade,The V grade that the respondent is confident in sending 90-100% of the time
+Hardest Route grade climbed (Ewbank grade) ,hardest_route_ever,Hardest Rope Send (Ever),The highest Ewbank rating the respondent has sent
+Hardest route climbed last 3 months (ewbank),hardest_route_recent,Hardest Rope Send (Recent),The highest Ewbank rating the respondent has sent in the last 3 months
+Route grade you can send 90-100% of climbs,hardest_route_confident,Rope Grade,The highest Ewbank rating that the respondent is confident in sending 90-100% of the time
+Frequency of climbing sessions per week,weekly_count_climbing,Climbs per Week,The respondent's estimate of how many times they climb in a week
+Average hours climbing per week (not including training),weekly_hours_climbing,Weekly Time Climbing (hours),The respondent's estimate of how many hours they climb in a week
+Average hours Training for climbing per week ,weekly_hours_training,Weekly Time Training (hours),The respondent's estimate of how many hours they train for climbing in a week
+Hangboard Frequency per week ,weekly_count_hangboard,Hangboard Sessions per Week,The respondent's estimate of how many times they hangboard in a week
+Max Weight hangboard 18mm edge - Half crimp (KG)  (10 seconds) (added weight only),halfcrimp_maxload,Half Crimp Max (kg),The most weight in kilograms the respondent can add to themselves on a 10 second half crimp hang off of an 18mm edge
+Max Weight hangboard 18mm edge - open crimp (KG) (10 seconds)  (added weight only),opencrimp_maxload,Open Crimp Max (kg),The most weight in kilograms the respondent can add to themselves on a 10 second open crimp hang off of an 18mm edge
+"Min Edge used (mm, +kg if weight added ) - Half Crimp (10 seconds)",halfcrimp_minedge,Half Crimp Min Edge (mm),The shortest edge in millimeters the respondent can hang off for 10 seconds half crimp hang
+"Min Edge used (mm, +kg if weight added) - Open crimp (10 seconds) ",opencrimp_minedge,Open Crimp Min Edge (mm),The shortest edge in millimeters the respondent can hang off for 10 seconds half crimp hang
+Campus Board frequency per week ,weekly_count_campus,Campus Sessions per Week,The respondent's estimate of how many times they use the campus board in a week
+Campus Board time per week (hours),weekly_hours_campus,Weekly Time Campusing (hours),The respondent's estimate of how many hours they use the campus board in a week
+Frequency of Endurance training sesions per week,weekly_count_endurance,Endurance Sessions per Week,The respondent's estimate of how many times they train endurance in a week
+General Strength Training frequency per week ,weekly_count_strength,Strength Sessions per Week,The respondent's estimate of how many times they strength train in a week
+Time spent General strength training (hours),session_hours_strength,Weekly Time Strength Training (hours),The respondent's estimate of how many hours they strength train in a week
+Max pull up reps,pullups_maxcount,Pull-up Max (Reps),The maximum number of reps of unweighted pull-ups the respondent can perform
+5 rep max weighted pull ups,pullups_maxload,Pull-up Max (Weight),The maximum added weight for which the respondent can perform five reps of pull-ups
+max push ups reps,pushups_maxcount,Push-up Max (Reps),The maximum number of reps of push-ups the respondent can perform
+max L-sit time ,lsit_maxtime,L-Sit Max (Seconds),The maximum seconds for which the respondent can hold an L-sit
+Where do you climb?,indoor_outdoor,,
+Hangboard grips used ,hangboard_grips,,
+Style of Hangboarding chosen ,hangboard_style,,
+Endurance training ,endurance_style,,
+Type of Strength training,strength_style,,
+"Other activities (ie yoga, cardio)",other_activities,,
