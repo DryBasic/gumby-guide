@@ -28,9 +28,9 @@ Max pull up reps,pullups_maxcount,Pull-up Max (Reps),The maximum number of reps 
 5 rep max weighted pull ups,pullups_maxload,Pull-up Max (Weight),The maximum added weight for which the respondent can perform five reps of pull-ups
 max push ups reps,pushups_maxcount,Push-up Max (Reps),The maximum number of reps of push-ups the respondent can perform
 max L-sit time ,lsit_maxtime,L-Sit Max (Seconds),The maximum seconds for which the respondent can hold an L-sit
-Where do you climb?,indoor_outdoor,,
-Hangboard grips used ,hangboard_grips,,
-Style of Hangboarding chosen ,hangboard_style,,
-Endurance training ,endurance_style,,
-Type of Strength training,strength_style,,
-"Other activities (ie yoga, cardio)",other_activities,,
+Where do you climb?,indoor_outdoor,Gym or Outdoors,"Whether the respondent climbs indoors, outdoors, or both"
+Hangboard grips used ,hangboard_grips,Hangboard Grips,The grips the respondent uses while hangboarding
+Style of Hangboarding chosen ,hangboard_style,Hangboard Style,The exercises the respondent performs when hangboarding
+Endurance training ,endurance_style,Endurance Training,The exercises the respondent performs when endurance training
+Type of Strength training,strength_style,Strength Training,The exercises the respondent performs when strength training
+"Other activities (ie yoga, cardio)",other_activities,Other Activities,The other activities the respondent does outside of climbing

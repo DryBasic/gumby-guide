@@ -1,7 +1,14 @@
 import streamlit as st
 
-class Question1:
-    def question1(self):
-        with st.expander('Q1'):
-            st.markdown('Q1')
-            st.code(self.global_filters)
+class CrossTraining:
+    def q1_panel(self):
+        with st.expander('Cross Training'):
+            c1, c2 = st.columns(2)
+            c1.multiselect(
+                'Activities',
+                options=self.widget_options['other_activities']
+            )
+            c2.multiselect(
+                'Strength Metric',
+                options=self.widget_options['strength_metrics']
+            )

@@ -11,5 +11,4 @@ st.set_page_config(
 HelpfulSidebar()
 
 dash = Dashboard()
-
-dash.question1()
+dash.q1_panel()
