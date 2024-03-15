@@ -1,4 +1,4 @@
-Questions
+**Questions**
 1. Which type of training associates most with a "stronger" climber? Is there a difference by sex?
 2. Which non-training feature correlates most with higher bouldering grades? Routes?
 3. What's the relationship between bouldering and rope climbing performance?

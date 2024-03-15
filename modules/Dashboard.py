@@ -2,6 +2,7 @@ import streamlit as st
 from utils.data import *
 from modules.CrossTraining import CrossTraining
 from modules.BoulderVsRope import BoulderVsRope
+from modules.ViolinAge import ViolinAge
 
 config = load_config()
 widget_opts = config['widget_options']
@@ -9,7 +10,7 @@ strength_conversion = config['strength_conversion']
 meta = load_metadata()
 data = load_data()
 
-class Dashboard(CrossTraining, BoulderVsRope):
+class Dashboard(CrossTraining, BoulderVsRope, ViolinAge):
     def __init__(self) -> None:
         self.widget_options = widget_opts
         self.strength_conversion = strength_conversion
