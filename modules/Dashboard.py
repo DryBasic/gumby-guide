@@ -1,8 +1,9 @@
 import streamlit as st
 from utils.data import *
 from modules.CrossTraining import CrossTraining
-from modules.BoulderVsRope import BoulderVsRope
+from modules.CorrelationExplorer import CorrelationExplorer
 from modules.ViolinAge import ViolinAge
+from modules.TrainingTraining import TrainingTraining
 
 config = load_config()
 widget_opts = config['widget_options']
@@ -10,10 +11,11 @@ strength_conversion = config['strength_conversion']
 meta = load_metadata()
 data = load_data()
 
-class Dashboard(CrossTraining, BoulderVsRope, ViolinAge):
+class Dashboard(CrossTraining, CorrelationExplorer, ViolinAge, TrainingTraining):
     def __init__(self) -> None:
         self.widget_options = widget_opts
         self.strength_conversion = strength_conversion
+        self.config = config
         self.col_to_label = {col: label for col, label in meta[['DataFrameKey', 'Label']].values}
         self.label_to_col = {label: col for col, label in self.col_to_label.items()}
         

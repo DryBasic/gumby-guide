@@ -6,16 +6,7 @@ class ViolinAge:
         with st.expander("What grade should you be climbing?", True):
             c1, c2 = st.columns(2)
             grade_opts = [self.col_to_label[i] for i in self.strength_conversion.keys()]
-            x_features = (
-                'height_binned',
-                'weight_binned',
-                'wingspan_binned',
-                'years_climbing',
-                'indoor_outdoor',
-                'sex',
-                'pullups_maxcount_binned',
-                'pushups_maxcount_binned'
-            )
+            x_features = self.config['violin_features']
             x_opts = [self.col_to_label[i] for i in x_features]
             xlabel = c1.selectbox('Characteristic', options=x_opts)
             grade = c2.selectbox(

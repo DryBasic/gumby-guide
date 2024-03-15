@@ -5,7 +5,9 @@ import json
 @st.cache_data
 def load_data():
     df = pd.read_csv('data/clean.csv')
-    df.other_activities = [eval(i) if i==i else [] for i in df.other_activities.values]
+    cfg = load_config()
+    for feature in cfg['multi_features']:
+        df[feature] = [eval(i) if i==i else [] for i in df[feature].values]
     return df
 
 @st.cache_data
