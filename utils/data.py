@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 import json
-import yaml
 
 @st.cache_data
 def load_data():
@@ -56,6 +55,6 @@ def filter_multi_feature(df: pd.DataFrame, feature: str, values: list):
             if v in row[feature]:
                 passing.append(i)
 
-    return df.iloc[passing]
+    return df.loc[passing]
 
 # def convert_strength_to_continuous(strength_metric, )

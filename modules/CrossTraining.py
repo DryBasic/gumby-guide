@@ -16,28 +16,32 @@ class CrossTraining:
             )
 
             if activities and strength_metrics:
-                c = st.columns(len(activities))
+                c = st.columns(len(strength_metrics))
 
                 for i, sm in enumerate(strength_metrics):
                     chart = self.activity_strength_bar(sm, activities)
-                    c[i].plotly_chart(chart)
+                    c[i].plotly_chart(chart, use_container_width=True)
     
     def activity_strength_bar(self, strength_metric, activities):
-
+        strength_attr = self.label_to_col[strength_metric]
         data = filter_multi_feature(
             self.data,
-            'other_activites',
+            'other_activities',
             activities
-        )[['other_activities', strength_metric]]
+        )[['other_activities', strength_attr, 'cid']]
 
-        if strength_metric in self.strength_conversion:
-            data['y'] = [self.strength_conversion[i] for i in data[strength_metric]]
-        else:
-            data['y'] = data[strength_metric]
-
-        fig = go.Figure()
-        fig.add_trace(
-            go.Bar()
-        )
+        grouped = data.explode('other_activities')\
+                    .groupby([strength_attr, 'other_activities'])\
+                    .count()\
+                    .reset_index()
+        
+        fig = go.Figure(layout={'title_text':strength_metric})
+        for activity in activities:
+            act_df = grouped.query(f'other_activities == "{activity}"')
+            x = self.widget_options[strength_attr] if strength_attr in self.widget_options else act_df[strength_attr]
+            fig.add_trace(
+                go.Bar(name=activity, x=x, y=act_df['cid'])
+            )
 
         return fig
+    

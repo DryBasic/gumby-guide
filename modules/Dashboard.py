@@ -1,6 +1,7 @@
 import streamlit as st
 from utils.data import *
 from modules.CrossTraining import CrossTraining
+from modules.BoulderVsRope import BoulderVsRope
 
 config = load_config()
 widget_opts = config['widget_options']
@@ -8,7 +9,7 @@ strength_conversion = config['strength_conversion']
 meta = load_metadata()
 data = load_data()
 
-class Dashboard(CrossTraining):
+class Dashboard(CrossTraining, BoulderVsRope):
     def __init__(self) -> None:
         self.widget_options = widget_opts
         self.strength_conversion = strength_conversion
@@ -44,7 +45,7 @@ class Dashboard(CrossTraining):
         )
     
     def debug(self):
-        with st.expander('Dataset', True):
+        with st.expander('Dataset'):
             # st.code(self.gf)
             st.dataframe(self.data)
             st.download_button(
