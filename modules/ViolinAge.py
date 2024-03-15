@@ -7,12 +7,12 @@ class ViolinAge:
             c1, c2 = st.columns(2)
             grade_opts = [self.col_to_label[i] for i in self.strength_conversion.keys()]
             x_features = (
-                'years_climbing',
-                'indoor_outdoor',
-                'sex',
                 'height_binned',
                 'weight_binned',
                 'wingspan_binned',
+                'years_climbing',
+                'indoor_outdoor',
+                'sex',
                 'pullups_maxcount_binned',
                 'pushups_maxcount_binned'
             )

@@ -1,7 +1,10 @@
-**Questions**
-1. Which type of training associates most with a "stronger" climber? Is there a difference by sex?
-2. Which non-training feature correlates most with higher bouldering grades? Routes?
-3. What's the relationship between bouldering and rope climbing performance?
-4. If you want to climb harder, should you just climb more? Hangboard more? Endurance train more? 
-    - Would this answer be the same for newer vs more experienced climbers?
-5. What grade would you expect someone to climb judging from how long they've climbed?
+## Deploying Locally
+
+1. Clone/download this repository
+2. From your terminal, navigate inside the working directory
+3. Install the required packages (just streamlit, pandas, and plotly) `pip install -r requirements.txt`
+4. From the command line run `streamlit run app.py`
+
+## About
+
+This application is the result of a final project for DSE 241 - Data Visualization. The referenced dataset was found [on this Reddit thread](https://www.reddit.com/r/climbharder/comments/gi7v2k/rquest_climbing_specific_datasets/) and the Google Sheet itself can be found [here](https://docs.google.com/spreadsheets/d/1J6d45EqIlIsIqNdi2X-Zl-EGFxf9d9T3R_W55xrpEAs/edit#gid=1650492946).

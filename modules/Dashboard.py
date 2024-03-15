@@ -28,7 +28,8 @@ class Dashboard(CrossTraining, BoulderVsRope, ViolinAge):
             global_filters[attr] = self.slider(c2, attr),
         self.climbers = c3.multiselect(
                 'Highlight specific climbers',
-                options=widget_opts['cid']
+                options=widget_opts['cid'],
+                help='Does nothing at the moment'
             )
         
         self.data = apply_global_filters(data, global_filters)
