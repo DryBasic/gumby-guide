@@ -2,9 +2,9 @@ import streamlit as st
 import plotly.graph_objects as go
 from utils.data import filter_multi_feature
 
-class CrossTraining:
-    def q1_panel(self):
-        with st.expander('Cross Training', True):
+class CrossTrainingDist:
+    def crosstrain_dist(self):
+        with st.expander('Cross Training Distribution', True):
             c1, c2 = st.columns(2)
             activities = c1.multiselect(
                 'Activities',

@@ -4,7 +4,7 @@ import pandas as pd
 from copy import deepcopy
 
 class CorrelationExplorer:
-    def q2_panel(self):
+    def correx(self):
         with st.expander('Correlation Explorer', True):
             c1, c2, _, c3 = st.columns([1, 1, 0.1, 4])
             opts = [self.col_to_label[i] for i in self.config['correx_features']]
@@ -21,12 +21,12 @@ class CorrelationExplorer:
         y_attr = self.label_to_col[y_label]
         data = self.data[[x_attr, y_attr]]
 
-        if x_attr in self.strength_conversion:
-            data[x_label] = [self.strength_conversion[x_attr][i] for i in data[x_attr].values]
+        if x_attr in self.conversion:
+            data[x_label] = [self.conversion[x_attr][i] for i in data[x_attr].values]
         else:
             data[x_label] = data[x_attr]
-        if y_attr in self.strength_conversion:
-            data[y_label] = [self.strength_conversion[y_attr][i] for i in data[y_attr].values]
+        if y_attr in self.conversion:
+            data[y_label] = [self.conversion[y_attr][i] for i in data[y_attr].values]
         else:
             data[y_label] = data[y_attr]
 
@@ -45,8 +45,8 @@ class CorrelationExplorer:
         b = 'hardest_boulder_confident'
         r = 'hardest_route_confident'
 
-        data[b] = [self.strength_conversion[b][i] for i in data[b]]
-        data[r] = [self.strength_conversion[r][i] for i in data[r]]
+        data[b] = [self.conversion[b][i] for i in data[b]]
+        data[r] = [self.conversion[r][i] for i in data[r]]
         corrs = []
         for feature in self.config['correx_features']:
             if feature not in (b, r):

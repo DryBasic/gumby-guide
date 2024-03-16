@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd; import numpy as np
 import streamlit as st
 import json
 
@@ -23,14 +23,31 @@ def load_config():
 
 @st.cache_data
 def apply_global_filters(df: pd.DataFrame, filters: dict):
-    if filters['sex'][0] != 'All':
-        df = df.query(f'sex == "{filters["sex"][0]}"')
-
+    cfg = load_config()
     values = load_config()['widget_options']
-    
+
+    categorical = (
+        'hardest_boulder_confident',
+        'hardest_route_confident',
+        'years_climbing'
+    )
+    continuous = cfg['continuous_features']
     for attr in filters.keys():
-        if attr != 'sex':
-            lower, upper = filters[attr][0]
+            
+        if attr == 'sex':
+            # I have no idea why this output is a tuple...
+            if filters['sex'][0] != 'All':
+                df = df.query(f'sex == "{filters["sex"][0]}"')
+        elif attr == 'indoor_outdoor':
+            value = filters[attr]
+            df = df.query(f'indoor_outdoor == "{value}"')
+
+        elif attr in continuous:
+            lower, upper = filters[attr]
+            df = df.query(f'{lower} <= {attr} <= {upper}')
+        
+        elif attr in categorical:
+            lower, upper = filters[attr]
             isin = []
             started = False
             ended = False
@@ -58,5 +75,3 @@ def filter_multi_feature(df: pd.DataFrame, feature: str, values: list):
                 passing.append(i)
 
     return df.loc[passing]
-
-# def convert_strength_to_continuous(strength_metric, )

@@ -2,8 +2,8 @@ import streamlit as st
 import plotly.graph_objects as go
 from utils.data import filter_multi_feature
 
-class TrainingTraining:
-    def q4_panel(self):
+class TrainingTrainingDist:
+    def trainingtraining_dist(self):
         multi = self.config['multi_features'][1:]
         with st.expander('Hanging, Strength, and Endurance', True):
             pick = st.selectbox(

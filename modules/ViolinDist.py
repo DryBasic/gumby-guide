@@ -1,11 +1,11 @@
 import streamlit as st
 import plotly.graph_objects as go
 
-class ViolinAge:
-    def q5_panel(self):
+class ViolinDist:
+    def violin_dist(self):
         with st.expander("What grade should you be climbing?", True):
             c1, c2 = st.columns(2)
-            grade_opts = [self.col_to_label[i] for i in self.strength_conversion.keys()]
+            grade_opts = [self.col_to_label[i] for i in self.conversion.keys()]
             x_features = self.config['violin_features']
             x_opts = [self.col_to_label[i] for i in x_features]
             xlabel = c1.selectbox('Characteristic', options=x_opts)
