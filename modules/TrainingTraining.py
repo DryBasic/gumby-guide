@@ -48,14 +48,14 @@ class TrainingTraining:
                     .groupby([strength_attr, feature])\
                     .count()\
                     .reset_index()
-        
         fig = go.Figure(layout={'title_text':strength_metric})
         for activity in activities:
             act_df = grouped.query(f'{feature} == "{activity}"')
-            x = self.widget_options[strength_attr] if strength_attr in self.widget_options else act_df[strength_attr]
             fig.add_trace(
-                go.Bar(name=activity, x=x, y=act_df['cid'])
+                go.Bar(name=activity, x=act_df[strength_attr], y=act_df['cid'])
             )
-
+            fig.update_xaxes(
+                categoryorder='array',
+                categoryarray= self.widget_options[strength_attr])
         return fig
     

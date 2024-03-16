@@ -22,13 +22,19 @@ class ViolinAge:
         fig = go.Figure()
         for group in self.widget_options[x]:
             gdf = df.query(f'{x} == "{group}"')
-            gdf['order_by'] = [self.strength_conversion[y][i] for i in gdf[y]]
             fig.add_trace(
                 go.Violin(
-                    x=gdf[x], y=gdf['order_by'], name=group,
+                    x=gdf[x], y=gdf[y], name=group,
                     box_visible=True, meanline_visible=True, opacity=0.6
                 )
             )
-
-        fig.update_layout(yaxis_zeroline=False)
+        fig.update_layout(
+            yaxis_zeroline=False,
+            margin={'t':0, 'b':0}
+        )            
+        fig.update_yaxes(
+            categoryorder='array',
+            categoryarray= self.widget_options[y],
+            tickvals=self.widget_options[y]
+        )
         return fig
