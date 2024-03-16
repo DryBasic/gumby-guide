@@ -36,7 +36,6 @@ class Dashboard(CrossTrainingDist, CrossTrainingGroup, CorrelationExplorer, Viol
         global_filters['sex'] = c1.radio('Sex', options=['All', 'M', 'F'], horizontal=True),
         global_filters['indoor_outdoor'] = c1.radio('Gym Bro or Crag Dad?', horizontal=False,
                                                      options=self.widget_options['indoor_outdoor'])
-        #global_filters['years_climbing'] = self.slider(c1, 'years_climbing'),
 
         for attr in ('hardest_boulder_confident', 'hardest_route_confident', 'years_climbing'):
             global_filters[attr] = self.slider(c2, attr, categorical=True)
@@ -45,7 +44,7 @@ class Dashboard(CrossTrainingDist, CrossTrainingGroup, CorrelationExplorer, Viol
 
         
         self.data = apply_global_filters(data, global_filters)
-        c3.markdown(f'{len(self.data)} Climbers selected')
+        c1.code(f'{len(self.data)} Climbers selected')
 
         self.gf = global_filters
 
