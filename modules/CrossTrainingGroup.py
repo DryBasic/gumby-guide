@@ -17,10 +17,7 @@ class CrossTrainingGroup:
             )
             grouper = c3.selectbox(
                 'Group By',
-                options=[
-                    'Years Climbing', 'Pull-up Max', 'Push-up Max', 'Height', 'Weight', 'Wingspan',
-                    'Endurance Sessions per Week', 'Campus Sessions per Week', 'Strength Sessions per Week', 'Hangboard Sessions per Week'
-                    ]
+                options=self.config['crossG_features']
             )
 
             if activities and strength_metric:
